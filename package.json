@@ -1,0 +1,62 @@
+{
+  "name": "history-soul-matcher",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Selfie-to-historical-figure matching web app. A 3-stage pipeline (Claude Vision + Tool Use → deterministic scoring → LLM narrative) eliminates hallucinations by removing person selection from the LLM entirely.",
+  "keywords": [
+    "next.js",
+    "claude",
+    "anthropic",
+    "vision",
+    "tool-use",
+    "prompt-caching",
+    "typescript",
+    "zod",
+    "vercel",
+    "portfolio"
+  ],
+  "homepage": "https://github.com/Ink6x/history-soul-matcher#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ink6x/history-soul-matcher.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ink6x/history-soul-matcher/issues"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "Jullien",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "enrich-figures": "tsx scripts/enrich-figures.ts",
+    "apply-enrichment": "tsx scripts/apply-enrichment.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.95.1",
+    "@vercel/og": "^0.11.1",
+    "next": "16.2.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitest/coverage-v8": "^4.1.6",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.6",
+    "tailwindcss": "^4",
+    "tsx": "^4.22.0",
+    "typescript": "^5",
+    "vitest": "^4.1.6"
+  }
+}
