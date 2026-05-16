@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { Anthropic } from '@anthropic-ai/sdk';
 import { ZodError } from 'zod';
 import { CLAUDE_CONFIG } from '@/lib/claude';
+import { checkRateLimit } from '@/lib/rate-limit';
 import { extractUserFeatures } from '@/lib/extract-features';
 import { generateNarrative } from '@/lib/generate-narrative';
 import { scoreFigures } from '@/lib/scoring';
@@ -17,6 +18,28 @@ const ALLOWED_MIME = new Set(['image/jpeg', 'image/png', 'image/webp', 'image/gi
 const MAX_FILE_SIZE = 3 * 1024 * 1024;
 
 export async function POST(request: NextRequest) {
+  // Content-Length guard: reject oversized requests before parsing the body
+  const contentLengthHeader = request.headers.get('content-length');
+  if (contentLengthHeader !== null) {
+    const contentLength = Number(contentLengthHeader);
+    if (!Number.isNaN(contentLength) && contentLength > MAX_FILE_SIZE + 4096) {
+      return NextResponse.json(
+        { error: '画像サイズが大きすぎます（3MB 以内にしてください）' },
+        { status: 400 },
+      );
+    }
+  }
+
+  // Per-IP rate limit (10 req / 1h); fails open when Upstash is not configured
+  const ip = (request.headers.get('x-forwarded-for') ?? '127.0.0.1').split(',')[0].trim();
+  const { success: rateLimitOk } = await checkRateLimit(ip);
+  if (!rateLimitOk) {
+    return NextResponse.json(
+      { error: 'リクエストが多すぎます。しばらく時間を置いてから再度お試しください。' },
+      { status: 429 },
+    );
+  }
+
   try {
     const formData = await request.formData();
     const file = formData.get('image');
