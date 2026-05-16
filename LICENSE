@@ -1,0 +1,64 @@
+All Rights Reserved
+Copyright (c) 2026 Jullien
+
+────────────────────────────────────────────────────────────────────────
+English
+────────────────────────────────────────────────────────────────────────
+
+This repository is published for the sole purpose of allowing third
+parties to view the source code for evaluation and educational
+reference. No license is granted to use, copy, modify, merge, publish,
+distribute, sublicense, or sell copies of the Software, in whole or in
+part, in any form or by any means, except as expressly permitted in
+writing by the copyright holder.
+
+In particular, the following activities are NOT permitted without
+prior written consent:
+
+  - Use of the Software, or any substantial portion of it, in any
+    commercial or non-commercial product or service.
+  - Redistribution of the Software in any form (source or compiled).
+  - Creation of derivative works based on the Software.
+  - Use of the Software to train, fine-tune, or otherwise build any
+    machine learning model.
+
+The Software is provided "AS IS", without warranty of any kind,
+express or implied, including but not limited to the warranties of
+merchantability, fitness for a particular purpose and noninfringement.
+In no event shall the authors or copyright holders be liable for any
+claim, damages or other liability, whether in an action of contract,
+tort or otherwise, arising from, out of or in connection with the
+Software or the use or other dealings in the Software.
+
+For license inquiries, please contact the copyright holder via the
+issue tracker of this repository or the contact information on the
+author's GitHub profile.
+
+────────────────────────────────────────────────────────────────────────
+日本語
+────────────────────────────────────────────────────────────────────────
+
+本リポジトリは、ソースコードの第三者による閲覧・評価・学習目的での
+参照を可能にすることのみを目的として公開されています。著作権者の
+書面による事前の許諾なく、本ソフトウェアの全部または一部を、いか
+なる形式・手段によっても、使用・複製・改変・統合・公表・頒布・サブ
+ライセンス・販売することはできません。
+
+特に、以下の行為は事前の書面による許諾なく行うことはできません。
+
+  - 本ソフトウェアまたはその実質的な一部を、商用・非商用を問わず
+    あらゆる製品・サービスに利用すること。
+  - 本ソフトウェアを、ソース形式・コンパイル済み形式を問わず再頒
+    布すること。
+  - 本ソフトウェアに基づく派生物を作成すること。
+  - 本ソフトウェアを、機械学習モデルの訓練・微調整・構築のために
+    使用すること。
+
+本ソフトウェアは、商品性、特定目的への適合性、権利非侵害の保証を
+含む明示または黙示のいかなる保証もなく、現状のまま提供されます。
+本ソフトウェアに関連して生じるいかなる請求・損害・責任についても、
+契約・不法行為その他のいずれの法理によるかを問わず、著作者および
+著作権者は責任を負いません。
+
+ライセンスに関するお問い合わせは、本リポジトリの Issue または
+著者の GitHub プロフィールに記載の連絡先までお願いいたします。
