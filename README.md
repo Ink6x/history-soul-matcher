@@ -5,6 +5,9 @@
     <a href="https://history-soul-matcher.vercel.app">
       <img alt="Vercel" src="https://img.shields.io/badge/Deployed%20on-Vercel-000000?logo=vercel&logoColor=white">
     </a>
+    <a href="https://github.com/Ink6x/history-soul-matcher/actions/workflows/ci.yml">
+      <img alt="CI" src="https://github.com/Ink6x/history-soul-matcher/actions/workflows/ci.yml/badge.svg">
+    </a>
     <img alt="Next.js" src="https://img.shields.io/badge/Next.js-16.2-000000?logo=next.js&logoColor=white">
     <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white">
     <img alt="React" src="https://img.shields.io/badge/React-19.2-61DAFB?logo=react&logoColor=black">
@@ -17,7 +20,28 @@
     <a href="https://history-soul-matcher.vercel.app"><strong>→ アプリを試す</strong></a>
     &nbsp;&nbsp;|&nbsp;&nbsp;
     <a href="docs/ARCHITECTURE.md"><strong>アーキテクチャ詳細</strong></a>
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="README.en.md"><strong>English</strong></a>
   </p>
+</div>
+
+---
+
+## スクリーンショット
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center"><b>アップロード画面</b></td>
+      <td align="center"><b>解析中</b></td>
+      <td align="center"><b>診断結果</b></td>
+    </tr>
+    <tr>
+      <td><img src="docs/images/upload.png" alt="アップロード画面" width="280"></td>
+      <td><img src="docs/images/loading.png" alt="解析中" width="280"></td>
+      <td><img src="docs/images/result.png" alt="診断結果" width="280"></td>
+    </tr>
+  </table>
 </div>
 
 ---
@@ -140,6 +164,16 @@ npm run dev
 - アップロード画像は Route Handler のメモリ上のみで処理し、レスポンス返却後に破棄します。**ファイルシステム・DB・ログには保存しません**
 - API キーはサーバーサイドの環境変数のみから参照し、クライアントやレスポンスには出力しません
 - 写真に写る人物の年齢・人種・性別を断定しないことをプロンプトで明示しています
+
+---
+
+## コントリビューション
+
+バグ報告・機能提案・プルリクエストを歓迎します。
+
+- [CONTRIBUTING.md](CONTRIBUTING.md) — 開発セットアップと貢献ガイド
+- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) — コミュニティ行動規範
+- [SECURITY.md](SECURITY.md) — 脆弱性報告手順
 
 ---
 
