@@ -7,8 +7,18 @@ export default defineConfig({
     environment: 'node',
     coverage: {
       provider: 'v8',
-      reporter: ['text', 'lcov'],
-      include: ['src/lib/scoring.ts', 'src/types/feature-similarity.ts'],
+      reporter: ['text', 'lcov', 'html'],
+      include: [
+        'src/lib/scoring.ts',
+        'src/lib/impression-similarity.ts',
+        'src/types/feature-similarity.ts',
+        'src/types/features.ts',
+        'src/types/analysis.ts',
+      ],
+      exclude: [
+        'src/content/**',
+        '**/*.test.ts',
+      ],
     },
   },
   resolve: {
