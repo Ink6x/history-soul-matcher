@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="public/banner.svg" alt="History Soul Matcher" width="100%">
+  <img src="public/banner.png" alt="History Soul Matcher" width="100%">
 
   <p>
     <a href="https://history-soul-matcher.vercel.app">
