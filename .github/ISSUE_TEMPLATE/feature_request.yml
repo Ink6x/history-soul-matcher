@@ -1,0 +1,41 @@
+name: Feature Request
+description: 新機能や改善を提案する
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        機能提案ありがとうございます。提案の背景と期待する動作をご記入ください。
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 解決したい課題
+      description: どんな問題や不便さがあるか説明してください
+      placeholder: 〇〇をしたいとき、〇〇ができなくて困っています
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: 提案する解決策
+      description: どのような機能・変更があれば解決できるか
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 検討した代替案
+      description: 他に考えた方法があれば記載してください
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 補足情報
+      description: 参考リンク・スクリーンショット等があれば添付してください
+    validations:
+      required: false
