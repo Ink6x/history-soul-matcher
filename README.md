@@ -12,6 +12,7 @@
     <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white">
     <img alt="React" src="https://img.shields.io/badge/React-19.2-61DAFB?logo=react&logoColor=black">
     <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind-4-06B6D4?logo=tailwindcss&logoColor=white">
+    <img alt="Tests" src="https://img.shields.io/badge/tests-77%20passing-brightgreen">
     <img alt="Powered by Claude" src="https://img.shields.io/badge/Powered%20by-Claude%20Vision-191919">
     <img alt="License" src="https://img.shields.io/badge/license-MIT-green">
   </p>

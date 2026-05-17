@@ -57,6 +57,10 @@ function getCategoricalSimilarity(
   }
 }
 
+/**
+ * Score a single historical figure against the user's facial profile.
+ * Returns rawScore (used for figure comparison) and matchRate (display value, floored at 20).
+ */
 export function scoreFigure(
   user: UserFacialProfile,
   figure: HistoricalFigure,
@@ -124,6 +128,10 @@ export function scoreFigure(
   return { matchRate, rawScore, breakdown };
 }
 
+/**
+ * Stage 2: Pure function — scan all figures and return the best match.
+ * No LLM involved; same input always returns the same figure (deterministic).
+ */
 export function scoreFigures(
   user: UserFacialProfile,
   figures: readonly HistoricalFigure[],
