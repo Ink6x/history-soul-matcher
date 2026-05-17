@@ -62,6 +62,11 @@ const TOOL = {
   cache_control: { type: 'ephemeral' as const },
 };
 
+/**
+ * Stage 1: Send the user's photo to Claude Vision and extract structured facial features.
+ * Uses Tool Use with closed enums to guarantee schema-valid output.
+ * Throws if the model truncates the response or returns no tool_use block.
+ */
 export async function extractUserFeatures(
   base64: string,
   mediaType: ImageMediaType,
@@ -94,12 +99,6 @@ export async function extractUserFeatures(
         ],
       },
     ],
-  });
-
-  console.log('[extract-features] meta:', {
-    model: CLAUDE_CONFIG.extractModel,
-    stop_reason: response.stop_reason,
-    usage: response.usage,
   });
 
   if (response.stop_reason === 'max_tokens') {

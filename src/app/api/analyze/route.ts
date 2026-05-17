@@ -68,14 +68,12 @@ export async function POST(request: NextRequest) {
     const arrayBuffer = await file.arrayBuffer();
     const base64 = Buffer.from(arrayBuffer).toString('base64');
     const mediaType = file.type as 'image/jpeg' | 'image/png' | 'image/webp' | 'image/gif';
-    console.log('[analyze] image:', { bytes: arrayBuffer.byteLength, mime: mediaType });
 
     // Stage 1: extract structured facial features from the user's photo.
     const userFeatures = await extractUserFeatures(base64, mediaType);
 
     // Stage 2: deterministic weighted scoring against all figures (no LLM).
     const { figure, matchRate, breakdown } = scoreFigures(userFeatures, HISTORICAL_FIGURES);
-    console.log('[analyze] matched:', figure.id, 'rate:', matchRate);
 
     // Stage 3: narrative generation citing the top contributing features.
     const narrative = await generateNarrative({

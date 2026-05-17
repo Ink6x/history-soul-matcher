@@ -10,6 +10,7 @@
     </a>
     <img alt="Next.js" src="https://img.shields.io/badge/Next.js-16.2-000000?logo=next.js&logoColor=white">
     <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white">
+    <img alt="Tests" src="https://img.shields.io/badge/tests-77%20passing-brightgreen">
     <img alt="Powered by Claude" src="https://img.shields.io/badge/Powered%20by-Claude%20Vision-191919">
     <img alt="License" src="https://img.shields.io/badge/license-MIT-green">
   </p>

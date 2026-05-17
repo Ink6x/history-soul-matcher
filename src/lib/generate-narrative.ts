@@ -31,6 +31,11 @@ function describeBreakdownItem(item: FeatureBreakdownItem): string {
   return `${label}: あなた=${item.userValue} / 人物=${item.figureValue} (寄与${item.contribution}点)`;
 }
 
+/**
+ * Stage 3: Generate a user-facing narrative (reason / episode / quote) for the matched figure.
+ * Receives the top breakdown items from Stage 2 to ground the narrative in specific features.
+ * Person selection is NOT done here — matchedFigure is passed in from Stage 2.
+ */
 export async function generateNarrative(args: {
   userFeatures: FacialFeatureProfile;
   matchedFigure: HistoricalFigure;
@@ -69,12 +74,6 @@ ${matchedSummary}
     tools: [TOOL],
     tool_choice: { type: 'tool', name: TOOL_NAME },
     messages: [{ role: 'user', content: userMessage }],
-  });
-
-  console.log('[generate-narrative] meta:', {
-    model: CLAUDE_CONFIG.narrativeModel,
-    stop_reason: response.stop_reason,
-    usage: response.usage,
   });
 
   const toolUse = response.content.find((b) => b.type === 'tool_use');
