@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: セキュリティ上の問題
+    url: https://github.com/Ink6x/history-soul-matcher/security/advisories/new
+    about: 脆弱性はこちらからご報告ください（公開 Issue は使用しないでください）

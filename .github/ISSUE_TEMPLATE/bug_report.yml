@@ -1,0 +1,57 @@
+name: Bug Report
+description: バグを報告する
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        バグ報告ありがとうございます。再現に必要な情報をできるだけ詳しくご記入ください。
+        セキュリティ上の問題は [Security Advisories](https://github.com/Ink6x/history-soul-matcher/security/advisories/new) からご報告ください。
+
+  - type: textarea
+    id: description
+    attributes:
+      label: バグの内容
+      description: 何が起きているか説明してください
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現手順
+      description: バグを再現するための手順
+      placeholder: |
+        1. 〇〇ページを開く
+        2. 〇〇をクリック
+        3. エラーが発生する
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待する動作
+      description: 本来どうなるべきか
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 環境
+      description: OS・ブラウザ・Node.js バージョン等
+      placeholder: |
+        - OS: Windows 11
+        - ブラウザ: Chrome 125
+        - Node.js: 20.x（ローカル再現の場合）
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 補足情報
+      description: スクリーンショット・エラーログ等があれば添付してください
+    validations:
+      required: false
