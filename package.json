@@ -33,6 +33,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "enrich-figures": "tsx scripts/enrich-figures.ts",

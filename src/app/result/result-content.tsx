@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, Suspense } from 'react';
+import { useEffect, useMemo, Suspense } from 'react';
 import type { ReadonlyURLSearchParams } from 'next/navigation';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { AnalysisResultSchema, type AnalysisResult } from '@/types/analysis';
@@ -32,12 +32,7 @@ function loadResult(searchParams: ReadonlyURLSearchParams): LoadedState {
 function ResultBody() {
   const searchParams = useSearchParams();
   const router = useRouter();
-  const [state, setState] = useState<LoadedState>({ result: null, error: null });
-  const { result, error } = state;
-
-  useEffect(() => {
-    setState(loadResult(searchParams));
-  }, [searchParams]);
+  const { result, error } = useMemo(() => loadResult(searchParams), [searchParams]);
 
   useEffect(() => {
     if (result) {
