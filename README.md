@@ -147,6 +147,13 @@ npm run dev
 
 設計思想・スコアリングアルゴリズム・データモデルの詳細は **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)** を参照してください。
 
+| ドキュメント | 内容 |
+|-------------|------|
+| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | 全体設計・スコアリングアルゴリズム・データモデル |
+| [docs/adr/](docs/adr/) | 設計判断の記録（なぜその実装にしたか） |
+| [docs/PROMPT_DESIGN.md](docs/PROMPT_DESIGN.md) | Stage 1/3 のプロンプト設計方針・Tool Use スキーマ |
+| [docs/DATASET.md](docs/DATASET.md) | 200名データセットの構造・選定基準・拡張手順 |
+
 ---
 
 ## Vercel へのデプロイ
